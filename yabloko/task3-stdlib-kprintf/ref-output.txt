@@ -1,0 +1,5 @@
+Booting from Hard Disk...
+YABLOKO bootloader starte
+year: 1984
+0, 42, and 31337
+0xdeadbeef

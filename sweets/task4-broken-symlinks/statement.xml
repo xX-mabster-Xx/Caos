@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<problem
+    package="problems.kr4"
+    id="broken_symlinks"
+    type="standard">
+  <statement language="ru_RU">
+    <description>
+        <p>Программе в аргументах командной строки передаются пути к файлам. Каждый путь PATH
+            следует напечатать на stdout в следующем виде:</p>
+        <ul>
+            <li><code>PATH (missing)</code>, если файл не существует;</li>
+            <li><code>PATH (broken symlink)</code>, если файл является символической ссылкой,
+                указывающей на несуществующий путь;</li>
+            <li><code>PATH</code> во всех остальных случаях.</li>
+        </ul>
+        <p>Например:</p>
+        <pre>
+$ ln -s /non/existent symlink_bad
+$ ln -s regular symlink_good
+$ touch regular
+$ ./yourprog regular symlink_good symlink_bad /non/existent
+regular
+symlink_good
+symlink_bad (broken symlink)
+/non/existent (missing)</pre>
+    </description>
+  </statement>
+</problem>

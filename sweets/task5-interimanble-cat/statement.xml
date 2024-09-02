@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<problem
+    package="problems.kr6"
+    id="signal"
+    type="standard">
+  <statement language="ru_RU">
+    <description>
+        <p>Напишите программу <code>interminable_cat</code>, которая,
+            подобно <code>cat</code>, копирует данные из stdin в stdout, но НЕ
+                завершается по команде <code>killall interminable_cat</code>. Вместо этого
+                при поступлении соответствующего сигнала программа должна
+                незамедлительно вывести в stdout сообщение:</p>
+            <pre>We communicate on my terms.</pre>
+            <p>(завершив его переводом строки) и продолжать работу.</p>
+            <p>Ввод и вывод программы перенаправлены в каналы (учитывайте буферизацию).
+            Гарантируется, что вывод никогда не блокируется.</p>
+            <p>Вызывать функции stdio в обработчиках запрещено..</p>
+    </description>
+  </statement>
+</problem>

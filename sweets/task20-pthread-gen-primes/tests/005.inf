@@ -1,0 +1,2 @@
+environ = EJ_SPURIOUS_WAKEUPS=1
+time_limit_ms = 4500

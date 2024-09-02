@@ -1,0 +1,2 @@
+environ = EJ_SLOW_THREADS=1
+time_limit_ms = 450

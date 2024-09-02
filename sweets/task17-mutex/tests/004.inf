@@ -1,0 +1,1 @@
+environ = EJ_SLOW_WAIT=1 EJ_SINGLE_THREAD=1

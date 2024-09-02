@@ -1,0 +1,18 @@
+0 send sleep 0.05 && echo ok
+1 send sleep 0.5
+0 stop x
+1 stop x
+0 recv ok
+0 sleep 0.05  # to ensure that client0's process has finished
+============
+2 send sleep 0.05 && echo ok  # must not be delayed by client1's process
+# T = 0.2 (good) / 0.6 (bad) (0.1 is from initial sleep)
+3 send sleep 0.5
+2 stop x
+3 stop x
+2 recv ok
+2 sleep 0.05
+============
+4 send sleep 0.5 && echo ok  # T = 0.3 (good) / 1.1 (bad)
+4 stop x
+4 recv ok  # T = 0.8 (good) / 1.6 (bad)

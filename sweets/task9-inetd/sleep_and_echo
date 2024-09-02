@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -u
+
+sleep $1
+echo "$2"

@@ -1,0 +1,3 @@
+
+params = 23456 ls -FL /proc/self/fd
+comment = "fd leaks in child"

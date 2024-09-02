@@ -1,0 +1,60 @@
+0 send good1
+1 send good1
+2 send good1
+3 send good1
+0 sleep 0.03  # wait until all forks are created before stopping the clients (more stable zombie detection)
+1 sleep 0.03
+2 sleep 0.03
+3 sleep 0.03
+============
+0 stop x
+1 stop x
+2 stop x
+3 stop x
+0 recv good1
+1 recv good1
+2 recv good1
+3 recv good1
+============
+4 sleep 0.05  # wait until zombies are reaped (reduce chance of false-positives)
+5 sleep 0.05
+6 sleep 0.05
+7 sleep 0.05
+4 send good1
+5 send good1
+6 send good1
+7 send good1
+4 sleep 0.03  # wait until all forks are created
+5 sleep 0.03
+6 sleep 0.03
+7 sleep 0.03
+============
+4 stop x
+5 stop x
+6 stop x
+7 stop x
+4 recv good1
+5 recv good1
+6 recv good1
+7 recv good1
+============
+8 sleep 0.05  # wait until zombies are reaped
+8 check_pids x
+============
+8 send good1
+9 send good1
+10 send good1
+11 send good1
+8 sleep 0.03  # wait until all forks are created
+9 sleep 0.03
+10 sleep 0.03
+11 sleep 0.03
+============
+8 stop x
+9 stop x
+10 stop x
+11 stop x
+8 recv good1
+9 recv good1
+10 recv good1
+11 recv good1

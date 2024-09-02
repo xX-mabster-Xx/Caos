@@ -1,0 +1,3 @@
+
+params = 23456 grep --line-buffered good
+comment = "buffering"

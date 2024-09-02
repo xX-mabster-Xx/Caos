@@ -1,0 +1,4 @@
+0 send good1
+0 send bad2
+0 stop x
+0 recv good1
